@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+
+    <style>
+
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("https://png.pngtree.com/background/20230613/original/pngtree-digital-technology-background-with-dark-lines-and-lines-picture-image_3386207.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+       
+        #main-title {
+            background: transparent;
+            color: white;
+            text-align: center;
+            padding: 60px;
+            margin: 0;
+            font-size: 40px;
+            text-shadow: 2px 2px 5px rgb(20, 19, 19);
+        }
+
+       
+        .navbar {
+            background-color: #605e5e;
+            text-align: center;
+            padding: 18px;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            font-size: 17px;
+            display: inline-block;
+        }
+
+        .nav-link:hover {
+            background-color: #717375;
+            border-radius: 5px;
+        }
+
+        .content {
+            padding: 30px;
+            min-height: 350px;
+        }
+
+        /* PAGE SECTIONS */
+        .page-section {
+            display: none;
+            background-color: rgba(255,255,255,0.95);
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .page-section.active {
+            display: block;
+        }
+
+        h2 {
+            color: #1565c0;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+       
+        .content-img {
+            width: 80%;
+            max-width: 450px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 15px;
+        }
+
+        
+        .logo {
+            width: 130px;
+            height: 130px;
+            object-fit: contain;
+            margin: 20px;
+        }
+
+     
+        footer {
+            margin-top: 20px;
+        }
+
+    
+        @media (max-width: 600px) {
+
+            #main-title {
+                font-size: 28px;
+                padding: 40px 10px;
+            }
+
+            .nav-link {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            .content {
+                padding: 10px;
+            }
+
+            .content-img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    
+    <header>
+        <h1 id="main-title">Digital World</h1>
+    </header>
+
+   
+    <nav class="navbar">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    
+    <main class="content">
+
+        <section id="home" class="page-section active">
+
+            <h2>Welcome to My Website!</h2>
+
+            <img class="content-img"
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+            alt="Computer and web development workspace">
+
+            <p>
+                Welcome to my website! This is the home page.
+                Here you can find information about web development,
+                HTML, CSS and website designing.
+            </p>
+
+        </section>
+
+        
+        <section id="about" class="page-section">
+
+            <h2>About Us</h2>
+
+            <img class="content-img"
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
+            alt="Person working on a computer">
+
+            <p>
+                This website is created using HTML and CSS.
+                HTML is used to create the structure of a webpage,
+                while CSS is used to add colors, fonts, layouts
+                and attractive designs.
+            </p>
+
+        </section>
+
+       
+        <section id="services" class="page-section">
+
+            <h2>Our Web Development Technologies</h2>
+
+            <div>
+
+                <img class="logo"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                alt="HTML5 Logo">
+
+                <img class="logo"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                alt="CSS3 Logo">
+
+            </div>
+
+            <h3>HTML and CSS Development</h3>
+
+            <p>
+                HTML helps to build webpage structure.
+                CSS helps to style webpages using colors,
+                backgrounds, fonts, layouts and animations.
+            </p>
+
+        </section>
+
+       
+        <section id="contact" class="page-section">
+
+            <h2>Contact Us</h2>
+
+            <img class="content-img"
+            src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a"
+            alt="Contact and communication">
+
+            <p>If you have any questions, feel free to contact us.</p>
+
+            <p>Email: krishna1234@gmail.com</p>
+
+            <p>Phone: 9873689329</p>
+
+        </section>
+
+    </main>
+
+    
+    <footer style="background-color: #222222; color: #ffffff; text-align: center; padding: 15px 0; font-size: 14px;">
+
+        <p>&copy; 2026 My Website. All rights reserved.</p>
+
+    </footer>
+
+    <script>
+
+        const links = document.querySelectorAll(".nav-link");
+        const sections = document.querySelectorAll(".page-section");
+
+        links.forEach(link => {
+
+            link.addEventListener("click", function(event) {
+
+                event.preventDefault();
+
+                sections.forEach(section => {
+                    section.classList.remove("active");
+                });
+
+                const target = this.getAttribute("href");
+
+                document.querySelector(target).classList.add("active");
+
+                history.replaceState(null, "", target);
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
